@@ -12,7 +12,7 @@ clean: FORCE
 	autoreconf -i 3rdparty/sox
 
 3rdparty/sox/Makefile: 3rdparty/sox/configure
-	cd 3rdparty/sox && ./configure --without-png --without-gsm --without-lpc10 --without-id3tag --without-wavpack --disable-shared --enable-static
+	cd 3rdparty/sox && ./configure --without-png --without-gsm --without-lpc10 --without-id3tag --without-wavpack --disable-shared --enable-static --without-amrwb --without-amrnb
 
 3rdparty/sox/soxconfig.h: 3rdparty/sox/Makefile
 	$(MAKE) -C 3rdparty/sox -s
