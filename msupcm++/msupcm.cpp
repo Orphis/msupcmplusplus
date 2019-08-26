@@ -29,7 +29,7 @@ int main(int argc, char * argv[])
 #ifdef _WIN32
 	lsx_init_console();
 	lsx_init_commandline_arguments(&wargc, &wargv);
-#else
+#elif __LINUX__
     wargv = argv;
     wargc = argc;
 
